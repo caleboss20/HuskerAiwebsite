@@ -40,7 +40,7 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
   const webhook = process.env.WAITLIST_WEBHOOK_URL;
   if (!webhook) {
     if (process.env.NODE_ENV !== "production") {
-      console.log("[waitlist] WAITLIST_WEBHOOK_URL not set; signup:", signup);
+      console.log(`[waitlist] WAITLIST_WEBHOOK_URL not set; signup: ${JSON.stringify(signup)}`);
       return { status: "success" };
     }
     console.error("[waitlist] WAITLIST_WEBHOOK_URL is not configured");
