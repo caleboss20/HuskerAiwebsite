@@ -42,10 +42,9 @@ export const grades: Grade[] = [
     grade: "B",
     quality: "Part fresh, part rotting",
     uses: ["Cocoa potash", "Soap making"],
-    // TODO: placeholder (toned crop of the Grade A photo); replace
-    // with a real photo of Grade B husk.
+    // "Cacao black pod rot" by Scot Nelson, Wikimedia Commons, CC0.
     image: gradeB,
-    imageAlt: "Cocoa pod husk with some drying, Grade B husk",
+    imageAlt: "Cocoa pod that is half fresh and half rotting brown, Grade B husk",
   },
   {
     grade: "C",

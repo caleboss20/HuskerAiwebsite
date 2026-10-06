@@ -32,11 +32,11 @@ export function HowItWorks() {
         </ol>
 
         <div className="mt-28 sm:mt-32">
-          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
             <h3 className="font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
               Every grade has a buyer.
             </h3>
-            <p className="max-w-md text-fg-muted">
+            <p className="mt-3 max-w-xl text-lg leading-relaxed text-fg-muted">
               The marketplace matches your grade to companies that need it, so
               even older husk earns money instead of being burned.
             </p>
