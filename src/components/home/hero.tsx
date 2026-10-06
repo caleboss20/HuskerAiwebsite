@@ -11,18 +11,11 @@ export function Hero() {
       />
       <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-      {/* Text sits first and compact so the badge, heading and both
+      {/* Text sits first and compact so the heading and both
           buttons are visible on load, on phones too. */}
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-24 sm:px-6 lg:min-h-[min(100svh,860px)] lg:grid-cols-[1.15fr_1fr] lg:gap-10 lg:pb-16 lg:pt-28">
         <div className="text-center lg:text-left">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/80 sm:text-sm">
-            <svg aria-hidden viewBox="0 0 20 20" className="size-3.5 shrink-0 text-pod-400" fill="currentColor">
-              <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
-            </svg>
-            Winner · 2026 Pan African AI Summit Hack-AI-Thon
-          </p>
-
-          <h1 className="mt-5 font-display text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl lg:text-[4.25rem]">
+          <h1 className="font-display text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl lg:text-[4.25rem]">
             Turn cocoa pod husks into{" "}
             <span className="text-brand-400">extra income.</span>
           </h1>
