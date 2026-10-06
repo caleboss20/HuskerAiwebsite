@@ -1,4 +1,5 @@
 import { Hero } from "@/components/home/hero";
+import { About } from "@/components/home/about";
 import { Audiences } from "@/components/home/audiences";
 import { HowItWorks } from "@/components/home/how-it-works";
 import { Impact } from "@/components/home/impact";
@@ -10,6 +11,7 @@ export default function Home() {
       <Impact />
       <HowItWorks />
       <Audiences />
+      <About />
     </main>
   );
 }

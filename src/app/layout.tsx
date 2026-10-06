@@ -3,6 +3,7 @@ import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import { JsonLd } from "@/components/json-ld";
 import { Navbar } from "@/components/navbar";
 import { siteConfig } from "@/lib/site";
+import { team } from "@/content/team";
 import "./globals.css";
 
 // Outfit for headings, Plus Jakarta Sans for body copy.
@@ -67,6 +68,15 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColor,
 };
 
+function toPerson(m: (typeof team)[number]) {
+  return {
+    "@type": "Person",
+    name: m.name,
+    jobTitle: m.role,
+    ...(m.linkedin && { sameAs: [m.linkedin] }),
+  };
+}
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -76,6 +86,8 @@ const structuredData = {
       name: siteConfig.name,
       url: siteConfig.url,
       description: siteConfig.description,
+      founder: team.filter((m) => m.role.includes("Co-founder")).map(toPerson),
+      employee: team.filter((m) => !m.role.includes("Co-founder")).map(toPerson),
     },
     {
       "@type": "WebSite",
