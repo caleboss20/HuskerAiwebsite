@@ -12,7 +12,7 @@ export default function NotFound() {
       <div className="text-center">
         <LostPod />
 
-        <p className="mt-12 text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">Error 404</p>
+        <p className="mt-12 text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Error 404</p>
         <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-fg sm:text-5xl">
           This page wandered off the farm.
         </h1>

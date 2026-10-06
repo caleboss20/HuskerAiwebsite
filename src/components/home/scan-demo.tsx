@@ -6,7 +6,7 @@ export function ScanDemo() {
   return (
     <div className="mt-24 grid items-center gap-12 sm:mt-28 lg:grid-cols-2 lg:gap-14">
       <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">Scan in action</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Scan in action</p>
         <h3 className="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
           The AI finds every husk in the pile.
         </h3>

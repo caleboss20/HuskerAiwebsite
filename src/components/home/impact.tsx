@@ -22,7 +22,7 @@ export function Impact() {
   return (
     <section aria-labelledby="impact-heading" className="border-t border-line py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">Impact</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Impact</p>
         <h2
           id="impact-heading"
           className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl"

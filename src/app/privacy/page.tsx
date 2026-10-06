@@ -25,7 +25,7 @@ export default function PrivacyPage() {
   return (
     <main className="flex-1 px-5 pb-24 pt-32 sm:px-6 sm:pt-36">
       <article className="mx-auto max-w-2xl">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">Legal</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Legal</p>
         <h1 className="mt-3 font-display text-4xl font-semibold tracking-tight text-fg sm:text-5xl">
           Privacy policy
         </h1>

@@ -9,7 +9,7 @@ export function Waitlist() {
     >
       <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-6 lg:grid-cols-2 lg:gap-16">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">Join the waitlist</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Join the waitlist</p>
           <h2
             id="waitlist-heading"
             className="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl"

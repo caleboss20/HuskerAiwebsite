@@ -19,7 +19,7 @@ export function About() {
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-16">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">About us</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">About us</p>
             <h2
               id="about-heading"
               className="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl"

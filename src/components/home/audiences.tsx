@@ -22,7 +22,7 @@ function BenefitList({ items }: { items: Benefit[] }) {
             <path d="M4 10.5l4 4 8-9" />
           </svg>
           <div>
-            <h4 className="font-semibold text-fg">{item.title}</h4>
+            <h3 className="font-semibold text-fg">{item.title}</h3>
             <p className="mt-1 leading-relaxed text-fg-muted">{item.body}</p>
           </div>
         </li>
@@ -47,7 +47,7 @@ export function Audiences() {
             />
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">For farmers</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">For farmers</p>
             <h2 className="mt-3 font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
               Your husks are worth money.
             </h2>
