@@ -2,6 +2,8 @@ import type { StaticImageData } from "next/image";
 import gradeA from "@/assets/grade-a.webp";
 import gradeB from "@/assets/grade-b.webp";
 import gradeC from "@/assets/grade-c.webp";
+import farmerStanding from "@/assets/farmer-standing.webp";
+import huskPile from "@/assets/husk-pile.webp";
 
 export const steps = [
   {
@@ -56,17 +58,39 @@ export const grades: Grade[] = [
   },
 ];
 
-// Detection boxes for the scan demo, as % of the square husk-pile
-// photo (x, y = top-left). Grades and confidences are illustrative.
-export const scanDetections = [
-  { x: 34.5, y: 71.5, w: 6, h: 7, grade: "B", score: 91 },
-  { x: 26, y: 88, w: 10, h: 9, grade: "B", score: 89 },
-  { x: 42, y: 87, w: 13, h: 10, grade: "A", score: 95 },
-  { x: 53, y: 79, w: 11, h: 9, grade: "A", score: 93 },
-  { x: 63, y: 75, w: 8, h: 8, grade: "A", score: 90 },
-  { x: 54, y: 84, w: 17, h: 15, grade: "B", score: 88 },
-  { x: 72, y: 81, w: 10, h: 12, grade: "B", score: 86 },
-  { x: 85, y: 79, w: 11, h: 8, grade: "A", score: 94 },
-  { x: 8, y: 80, w: 9, h: 7, grade: "B", score: 87 },
-  { x: 10, y: 90, w: 7, h: 6, grade: "C", score: 84 },
+export type Detection = { x: number; y: number; w: number; h: number; grade: "A" | "B" | "C"; score: number };
+
+export type ScanScene = {
+  image: StaticImageData;
+  alt: string;
+  // object-position of the photo inside the portrait frame (0–1).
+  focus: { x: number; y: number };
+  // Boxes as % of the full photo (x, y = top-left). Grades and
+  // confidences are illustrative.
+  detections: Detection[];
+};
+
+// Each scene shows for a few seconds in the scan demo, then the next.
+// Add a scene by adding an entry here.
+export const scanScenes: ScanScene[] = [
+  {
+    image: huskPile,
+    alt: "Cocoa farmers breaking pods beside a pile of cocoa husks, with AI detection boxes around each husk",
+    focus: { x: 0.55, y: 0.5 },
+    detections: [
+      { x: 34.5, y: 71.5, w: 6, h: 7, grade: "B", score: 91 },
+      { x: 26, y: 88, w: 10, h: 9, grade: "B", score: 89 },
+      { x: 42, y: 87, w: 13, h: 10, grade: "A", score: 95 },
+      { x: 53, y: 79, w: 11, h: 9, grade: "A", score: 93 },
+      { x: 63, y: 75, w: 8, h: 8, grade: "A", score: 90 },
+      { x: 54, y: 84, w: 17, h: 15, grade: "B", score: 88 },
+      { x: 72, y: 81, w: 10, h: 12, grade: "B", score: 86 },
+    ],
+  },
+  {
+    image: farmerStanding,
+    alt: "Cocoa farmer standing on his farm, with an AI detection box around a husk on the ground",
+    focus: { x: 0.5, y: 0.5 },
+    detections: [{ x: 53.5, y: 91.8, w: 8.5, h: 5.6, grade: "A", score: 92 }],
+  },
 ];
