@@ -17,7 +17,7 @@ export type TeamMember = {
 // structured data.
 export const team: TeamMember[] = [
   {
-    name: "Frank Adu Gyare",
+    name: "Frank Agyare",
     role: "Co-founder & AI/ML Lead",
     photo: frank,
     linkedin: "https://www.linkedin.com/in/frank-agyare-141269334",
