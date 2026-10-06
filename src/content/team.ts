@@ -43,5 +43,6 @@ export const team: TeamMember[] = [
     name: "Joseph Amankwah",
     role: "Software Engineer",
     photo: joseph,
+    linkedin: "https://www.linkedin.com/in/joseph-amankwah-3a646926a",
   },
 ];
