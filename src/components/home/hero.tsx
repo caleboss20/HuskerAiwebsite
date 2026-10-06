@@ -1,5 +1,6 @@
+import Image from "next/image";
 import { PhoneMockup } from "@/components/phone-mockup";
-import { AppScreenPreview } from "./app-screen-preview";
+import appHome from "@/assets/app-home.png";
 
 export function Hero() {
   return (
@@ -48,7 +49,16 @@ export function Hero() {
             className="absolute left-1/2 top-1/2 -z-10 size-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgb(var(--glow)/0.2)] blur-3xl"
           />
           <PhoneMockup>
-            <AppScreenPreview />
+            <Image
+              src={appHome}
+              alt="Husker AI app home screen showing husk prices by grade, CO₂ avoided and the AI husk scan"
+              fill
+              sizes="290px"
+              placeholder="blur"
+              loading="eager"
+              fetchPriority="high"
+              className="object-cover object-top"
+            />
           </PhoneMockup>
         </div>
       </div>
