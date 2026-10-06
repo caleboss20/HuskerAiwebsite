@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import type { ScanScene } from "@/content/how-it-works";
 
 const FRAME_ASPECT = 2 / 3; // width / height of the portrait frame
-const SCENE_MS = 5000;
-const BOX_STEP_S = 0.3;
+const SCENE_MS = 7000;
+const BOX_STEP_S = 0.25;
 
 // Box layer matching where object-cover places the photo, so box % stay
 // aligned with the photo whatever its aspect ratio.
