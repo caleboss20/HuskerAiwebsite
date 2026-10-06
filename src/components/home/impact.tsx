@@ -20,7 +20,7 @@ export function Impact() {
   const citedSources = [...new Set(stats.flatMap((s) => (s.sourceId ? [s.sourceId] : [])))];
 
   return (
-    <section aria-labelledby="impact-heading" className="border-t border-line py-20 sm:py-24">
+    <section aria-labelledby="impact-heading" className="border-t border-line py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-600">Impact</p>
         <h2
@@ -69,11 +69,14 @@ export function Impact() {
         </p>
       </div>
 
-      <div className="mt-20">
+      <div className="mx-auto mt-24 max-w-6xl px-5 sm:mt-32 sm:px-6">
+        <div className="border-t border-line" />
+      </div>
+      <div className="mt-16 sm:mt-20">
         <p className="mx-auto max-w-6xl px-5 text-center text-sm font-medium text-fg-muted sm:px-6">
           Companies in Ghana already turning cocoa husk into value
         </p>
-        <div className="group mt-8 flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="group mt-10 flex overflow-hidden sm:mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
             <CompanyList />
             <CompanyList hidden />
