@@ -30,7 +30,7 @@ export function Hero() {
           <div className="mt-7 flex flex-wrap justify-center gap-3 lg:justify-start">
             <a
               href="#waitlist"
-              className="rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-on-brand shadow-lg shadow-brand-600/25 transition-colors hover:bg-brand-500"
+              className="rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-on-brand transition-colors hover:bg-brand-500"
             >
               Join the waitlist
             </a>

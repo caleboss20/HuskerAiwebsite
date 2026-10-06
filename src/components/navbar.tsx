@@ -38,7 +38,7 @@ export function Navbar() {
 
         <Link
           href="/#waitlist"
-          className="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-on-brand shadow-lg shadow-brand-600/25 transition-colors hover:bg-brand-500 md:inline-block"
+          className="hidden rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-on-brand transition-colors hover:bg-brand-500 md:inline-block"
         >
           Join the waitlist
         </Link>
