@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import { JsonLd } from "@/components/json-ld";
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { siteConfig } from "@/lib/site";
 import { team } from "@/content/team";
@@ -86,6 +87,7 @@ const structuredData = {
       name: siteConfig.name,
       url: siteConfig.url,
       description: siteConfig.description,
+      sameAs: Object.values(siteConfig.social).filter(Boolean),
       founder: team.filter((m) => m.role.includes("Co-founder")).map(toPerson),
       employee: team.filter((m) => !m.role.includes("Co-founder")).map(toPerson),
     },
@@ -111,6 +113,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd data={structuredData} />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -30,6 +30,16 @@ export const siteConfig = {
     "biomass",
     "cocoa farmers",
   ],
+  // Public contact details. Footer shows only the ones that are set.
+  contact: {
+    email: "" as string,
+    phone: "" as string,
+    location: "Kumasi, Ghana",
+  },
+  social: {
+    linkedin: "https://www.linkedin.com/company/husker-ai",
+    x: "" as string,
+  },
   // Brand colours (match globals.css).
   themeColor: "#f3ebe0",
   backgroundColor: "#f3ebe0",
