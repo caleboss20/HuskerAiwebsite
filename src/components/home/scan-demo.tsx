@@ -38,7 +38,7 @@ export function ScanDemo() {
         </dl>
       </div>
 
-      <figure className="relative mx-auto aspect-square w-full max-w-[560px] overflow-hidden rounded-3xl bg-ink-900 lg:mr-0">
+      <figure className="relative mx-auto aspect-[4/5] w-full max-w-[520px] overflow-hidden rounded-3xl bg-ink-900 lg:mr-0">
         <Image
           src={huskPile}
           alt="Cocoa farmers breaking pods beside a pile of cocoa husks, with AI detection boxes drawn around each husk"
@@ -60,8 +60,10 @@ export function ScanDemo() {
           Scanning husk pile
         </div>
 
-        {/* Detection boxes */}
-        <div aria-hidden>
+        {/* Detection boxes. The square photo is cropped to 4:5 by
+            object-cover, so the boxes sit on a square layer the same size
+            as the rendered photo to keep their % positions accurate. */}
+        <div aria-hidden className="absolute inset-y-0 left-1/2 aspect-square h-full -translate-x-1/2">
           {scanDetections.map((d, i) => (
             <div
               key={i}
@@ -89,9 +91,10 @@ export function ScanDemo() {
           <p className="text-[11px] font-medium text-neutral-500">Scan result</p>
           <p className="mt-0.5 font-display text-xl font-semibold">{scanDetections.length} husks</p>
           <p className="mt-2 text-xs text-neutral-700">
+            <span className="text-neutral-500">Grade </span>
             {["A", "B", "C"].map((g, i) => (
               <span key={g}>
-                {i > 0 && " · "}Grade {g} <b>{counts[g] ?? 0}</b>
+                {i > 0 && " · "}{g} <b>{counts[g] ?? 0}</b>
               </span>
             ))}
           </p>

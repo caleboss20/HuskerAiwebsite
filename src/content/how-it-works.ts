@@ -67,9 +67,6 @@ export const scanDetections = [
   { x: 54, y: 84, w: 17, h: 15, grade: "B", score: 88 },
   { x: 72, y: 81, w: 10, h: 12, grade: "B", score: 86 },
   { x: 85, y: 79, w: 11, h: 8, grade: "A", score: 94 },
-  { x: 89, y: 88, w: 10, h: 10, grade: "B", score: 90 },
-  { x: 0.5, y: 79, w: 6, h: 6, grade: "A", score: 92 },
   { x: 8, y: 80, w: 9, h: 7, grade: "B", score: 87 },
-  { x: 3, y: 90, w: 8, h: 6, grade: "A", score: 93 },
   { x: 10, y: 90, w: 7, h: 6, grade: "C", score: 84 },
 ];
