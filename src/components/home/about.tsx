@@ -37,7 +37,7 @@ export function About() {
         </div>
 
         {/* One row on desktop, cards staggered up and down for rhythm. */}
-        <ul className="mt-16 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-5">
+        <ul className="mt-16 grid grid-cols-1 gap-x-4 gap-y-12 sm:grid-cols-3 sm:gap-y-10 lg:grid-cols-5 lg:gap-x-5">
           {team.map((member, i) => (
             <li key={member.name} className={i % 2 === 1 ? "lg:mt-14" : undefined}>
               <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-ink-900">
@@ -46,14 +46,15 @@ export function About() {
                     src={member.photo}
                     alt={`${member.name}, ${member.role} at Husker AI`}
                     fill
-                    sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 50vw"
+                    sizes="(min-width: 1024px) 220px, (min-width: 640px) 33vw, 100vw"
+                    quality={90}
                     placeholder="blur"
                     className="object-cover object-top"
                   />
                 ) : (
                   <span
                     aria-hidden
-                    className="grid size-full place-items-center bg-ink-800 font-display text-4xl font-semibold text-fg-muted"
+                    className="grid size-full place-items-center bg-ink-800 font-display text-6xl sm:text-4xl font-semibold text-fg-muted"
                   >
                     {member.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
                   </span>
@@ -61,10 +62,10 @@ export function About() {
               </div>
               <div className="mt-4 flex items-start justify-between gap-2">
                 <div>
-                  <h3 className="font-display text-base font-semibold leading-tight tracking-tight text-fg">
+                  <h3 className="font-display text-xl font-semibold leading-tight tracking-tight text-fg sm:text-base">
                     {member.name}
                   </h3>
-                  <p className="mt-1 text-xs leading-snug text-fg-muted sm:text-[13px]">{member.role}</p>
+                  <p className="mt-1 text-base leading-snug text-fg-muted sm:text-[13px]">{member.role}</p>
                 </div>
                 {member.linkedin && (
                   <a
@@ -72,7 +73,7 @@ export function About() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${member.name} on LinkedIn`}
-                    className="grid size-8 shrink-0 place-items-center rounded-full border border-line text-fg-muted transition-colors hover:border-[#0a66c2] hover:text-[#0a66c2]"
+                    className="grid size-10 shrink-0 place-items-center rounded-full border sm:size-8 border-line text-fg-muted transition-colors hover:border-[#0a66c2] hover:text-[#0a66c2]"
                   >
                     <LinkedInIcon />
                   </a>

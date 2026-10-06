@@ -20,6 +20,13 @@ function boxLayer(scene: ScanScene) {
   return { width: "100%", height: `${h}%`, left: "0%", top: `${-(h - 100) * scene.focus.y}%` };
 }
 
+// object-cover zooms photos wider than the frame, so request a
+// proportionally larger image or it looks blurry on phones.
+function imageSizes(scene: ScanScene) {
+  const zoom = Math.max(1, scene.image.width / scene.image.height / FRAME_ASPECT);
+  return `(min-width: 1024px) ${Math.round(440 * zoom)}px, ${Math.round(100 * zoom)}vw`;
+}
+
 export function ScanCarousel({ scenes }: { scenes: ScanScene[] }) {
   const [active, setActive] = useState(0);
 
@@ -39,7 +46,8 @@ export function ScanCarousel({ scenes }: { scenes: ScanScene[] }) {
             src={s.image}
             alt={s.alt}
             fill
-            sizes="(min-width: 1024px) 440px, 100vw"
+            sizes={imageSizes(s)}
+            quality={90}
             placeholder="blur"
             aria-hidden={i !== active}
             className={`object-cover transition-opacity duration-700 ${i === active ? "opacity-100" : "opacity-0"}`}
