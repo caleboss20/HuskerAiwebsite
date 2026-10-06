@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { grades, steps } from "@/content/how-it-works";
+import { ScanDemo } from "./scan-demo";
 
 export function HowItWorks() {
   return (
@@ -30,6 +31,8 @@ export function HowItWorks() {
             </li>
           ))}
         </ol>
+
+        <ScanDemo />
 
         <div className="mt-28 sm:mt-32">
           <div>
