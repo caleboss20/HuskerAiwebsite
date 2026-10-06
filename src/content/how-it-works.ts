@@ -2,8 +2,8 @@ import type { StaticImageData } from "next/image";
 import gradeA from "@/assets/grade-a.webp";
 import gradeB from "@/assets/grade-b.webp";
 import gradeC from "@/assets/grade-c.webp";
-import farmerStanding from "@/assets/farmer-standing.webp";
 import huskPile from "@/assets/husk-pile.webp";
+import podPile from "@/assets/pod-pile.webp";
 
 export const steps = [
   {
@@ -68,6 +68,8 @@ export type ScanScene = {
   // Boxes as % of the full photo (x, y = top-left). Grades and
   // confidences are illustrative.
   detections: Detection[];
+  // Required for openly licensed photos (e.g. CC BY-SA).
+  credit?: { text: string; href: string };
 };
 
 // Each scene shows for a few seconds in the scan demo, then the next.
@@ -88,9 +90,29 @@ export const scanScenes: ScanScene[] = [
     ],
   },
   {
-    image: farmerStanding,
-    alt: "Cocoa farmer standing on his farm, with an AI detection box around a husk on the ground",
+    image: podPile,
+    alt: "Pile of cocoa pods on a farm floor, with AI detection boxes around each pod",
     focus: { x: 0.5, y: 0.5 },
-    detections: [{ x: 53.5, y: 91.8, w: 8.5, h: 5.6, grade: "A", score: 92 }],
+    detections: [
+      { x: 29.9, y: 20.4, w: 12.5, h: 9.3, grade: "A", score: 96 },
+      { x: 58.3, y: 24.5, w: 13.2, h: 7, grade: "A", score: 94 },
+      { x: 66, y: 30.6, w: 10.1, h: 6, grade: "C", score: 88 },
+      { x: 50.3, y: 31.5, w: 12.9, h: 6.5, grade: "A", score: 95 },
+      { x: 27.8, y: 32.9, w: 15.3, h: 8.3, grade: "B", score: 87 },
+      { x: 11.8, y: 33.3, w: 11, h: 5.6, grade: "B", score: 85 },
+      { x: 57, y: 37.5, w: 11.8, h: 9.3, grade: "B", score: 90 },
+      { x: 72.2, y: 49.5, w: 14.6, h: 6, grade: "B", score: 86 },
+      { x: 31.3, y: 50.7, w: 17.4, h: 7.4, grade: "B", score: 89 },
+      { x: 0, y: 54.2, w: 9, h: 5, grade: "C", score: 91 },
+      { x: 22.2, y: 62, w: 11.8, h: 7.4, grade: "A", score: 93 },
+      { x: 77.8, y: 65.3, w: 9.7, h: 9.7, grade: "B", score: 88 },
+      { x: 44.4, y: 66.7, w: 8.6, h: 7.9, grade: "A", score: 94 },
+      { x: 52.8, y: 67, w: 12.5, h: 5.6, grade: "A", score: 92 },
+      { x: 34, y: 69, w: 10.4, h: 6, grade: "B", score: 87 },
+    ],
+    credit: {
+      text: "Photo: Klasik.obalola, CC BY-SA 4.0",
+      href: "https://commons.wikimedia.org/wiki/File:Cocoa_pods.jpg",
+    },
   },
 ];

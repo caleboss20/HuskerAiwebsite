@@ -108,7 +108,15 @@ export function ScanCarousel({ scenes }: { scenes: ScanScene[] }) {
         </figcaption>
       </figure>
 
-      <div className="mt-4 flex justify-center gap-2" role="tablist" aria-label="Scan examples">
+      <p className="mt-2 h-4 text-right text-[11px] text-fg-muted">
+        {scene.credit && (
+          <a href={scene.credit.href} target="_blank" rel="noopener noreferrer" className="hover:underline">
+            {scene.credit.text}
+          </a>
+        )}
+      </p>
+
+      <div className="mt-2 flex justify-center gap-2" role="tablist" aria-label="Scan examples">
         {scenes.map((_, i) => (
           <button
             key={i}
