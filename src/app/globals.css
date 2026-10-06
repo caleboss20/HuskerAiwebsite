@@ -1,7 +1,54 @@
 @import "tailwindcss";
 
+/*
+ * Brand palettes. Components only use the ink-* / brand-* / glow tokens,
+ * so switching data-theme on <html> re-skins the whole site.
+ *   forest  — deep green + emerald (default)
+ *   midnight — navy + cocoa gold
+ *   graphite — charcoal + copper
+ */
+:root,
+[data-theme="forest"] {
+  --ink-950: #050d09;
+  --ink-900: #0a1912;
+  --ink-800: #11281d;
+  --brand-300: #6ee7b7;
+  --brand-400: #34d399;
+  --brand-500: #10b981;
+  --brand-600: #059669;
+  --brand-700: #047857;
+  --on-brand: #ffffff;
+  --glow: 16 185 129;
+}
+
+[data-theme="midnight"] {
+  --ink-950: #060a16;
+  --ink-900: #0b1224;
+  --ink-800: #142040;
+  --brand-300: #f1d28f;
+  --brand-400: #e2b863;
+  --brand-500: #d4a24c;
+  --brand-600: #c8963e;
+  --brand-700: #8a6424;
+  --on-brand: #0b1224;
+  --glow: 70 110 220;
+}
+
+[data-theme="graphite"] {
+  --ink-950: #0c0b0a;
+  --ink-900: #161412;
+  --ink-800: #2a2521;
+  --brand-300: #f0b48a;
+  --brand-400: #e39a68;
+  --brand-500: #d0804c;
+  --brand-600: #b8693a;
+  --brand-700: #7a4425;
+  --on-brand: #ffffff;
+  --glow: 208 128 76;
+}
+
 :root {
-  --background: #050d09;
+  --background: var(--ink-950);
   --foreground: #f5f7f6;
 }
 
@@ -10,18 +57,19 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-jakarta);
   --font-display: var(--font-outfit);
+
+  --color-ink-950: var(--ink-950);
+  --color-ink-900: var(--ink-900);
+  --color-ink-800: var(--ink-800);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-on-brand: var(--on-brand);
 }
 
-/* Brand palette: deep forest ink + emerald accent, amber for the pod. */
 @theme {
-  --color-ink-950: #050d09;
-  --color-ink-900: #0a1912;
-  --color-ink-800: #11281d;
-  --color-brand-300: #6ee7b7;
-  --color-brand-400: #34d399;
-  --color-brand-500: #10b981;
-  --color-brand-600: #059669;
-  --color-brand-700: #047857;
   --color-pod-400: #e8a33a;
 }
 

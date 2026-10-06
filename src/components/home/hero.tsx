@@ -7,7 +7,7 @@ export function Hero() {
       {/* Background glow */}
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_75%_0%,rgba(16,185,129,0.28),transparent_70%),radial-gradient(45%_40%_at_10%_100%,rgba(16,185,129,0.12),transparent_70%)]"
+        className="absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_75%_0%,rgb(var(--glow)/0.28),transparent_70%),radial-gradient(45%_40%_at_10%_100%,rgb(var(--glow)/0.12),transparent_70%)]"
       />
       <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
@@ -29,7 +29,7 @@ export function Hero() {
           <div className="mt-7 flex flex-wrap justify-center gap-3 lg:justify-start">
             <a
               href="#waitlist"
-              className="rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/25 transition-colors hover:bg-brand-500"
+              className="rounded-lg bg-brand-600 px-5 py-3 text-sm font-semibold text-on-brand shadow-lg shadow-brand-600/25 transition-colors hover:bg-brand-500"
             >
               Join the waitlist
             </a>
@@ -45,7 +45,7 @@ export function Hero() {
         <div className="relative">
           <div
             aria-hidden
-            className="absolute left-1/2 top-1/2 -z-10 size-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/20 blur-3xl"
+            className="absolute left-1/2 top-1/2 -z-10 size-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgb(var(--glow)/0.2)] blur-3xl"
           />
           <PhoneMockup>
             <AppScreenPreview />
