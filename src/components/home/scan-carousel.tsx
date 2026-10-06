@@ -29,11 +29,6 @@ export function ScanCarousel({ scenes }: { scenes: ScanScene[] }) {
   }, [active, scenes.length]);
 
   const scene = scenes[active];
-  const counts = scene.detections.reduce<Record<string, number>>((acc, d) => {
-    acc[d.grade] = (acc[d.grade] ?? 0) + 1;
-    return acc;
-  }, {});
-  const summaryDelay = `${scene.detections.length * BOX_STEP_S + 0.3}s`;
 
   return (
     <div className="mx-auto w-full max-w-[440px] lg:mr-0">
@@ -85,26 +80,8 @@ export function ScanCarousel({ scenes }: { scenes: ScanScene[] }) {
           ))}
         </div>
 
-        <figcaption
-          key={`result-${active}`}
-          className="absolute right-6 top-6 w-44 animate-pop rounded-xl bg-white p-3.5 text-[#1a1a1a] motion-reduce:animate-none"
-          style={{ animationDelay: summaryDelay }}
-        >
-          <p className="text-[11px] font-medium text-neutral-500">Scan result</p>
-          <div className="mt-0.5">
-            <p className="font-display text-xl font-semibold">
-              {scene.detections.length} {scene.detections.length === 1 ? "husk" : "husks"}
-            </p>
-            <p className="mt-1 text-xs text-neutral-700">
-              <span className="text-neutral-500">Grade </span>
-              {(["A", "B", "C"] as const).map((g, i) => (
-                <span key={g}>
-                  {i > 0 && " · "}
-                  {g} <b>{counts[g] ?? 0}</b>
-                </span>
-              ))}
-            </p>
-          </div>
+        <figcaption className="sr-only">
+          Husker AI detects and grades each cocoa pod in the photo.
         </figcaption>
       </figure>
 
