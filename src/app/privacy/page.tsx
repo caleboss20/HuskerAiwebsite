@@ -150,11 +150,26 @@ export default function PrivacyPage() {
           </section>
         </div>
 
-        <p className="mt-16 border-t border-line pt-6 text-sm text-fg-muted">
-          <Link href="/" className="font-medium text-brand-700 hover:underline">
-            ← Back to home
+        <div className="mt-16 border-t border-line pt-8">
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-2 rounded-lg border border-line bg-surface px-4 py-2.5 text-sm font-semibold text-fg transition-colors hover:bg-surface-strong"
+          >
+            <svg
+              aria-hidden
+              viewBox="0 0 20 20"
+              className="size-4 transition-transform group-hover:-translate-x-0.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M16 10H4M9 5l-5 5 5 5" />
+            </svg>
+            Back to home
           </Link>
-        </p>
+        </div>
       </article>
     </main>
   );
