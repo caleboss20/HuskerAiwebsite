@@ -1,9 +1,10 @@
 @import "tailwindcss";
 
 /*
- * Brand palettes. Components only use the ink-* / brand-* / glow tokens,
- * so switching data-theme on <html> re-skins the whole site.
- *   forest  — deep green + emerald (default)
+ * Brand palettes. Components only use the theme tokens below, so
+ * switching data-theme on <html> re-skins the whole site.
+ *   earth    — light sand + sage green (current)
+ *   forest   — deep green + emerald
  *   midnight — navy + cocoa gold
  *   graphite — charcoal + copper
  */
@@ -19,6 +20,29 @@
   --brand-700: #047857;
   --on-brand: #ffffff;
   --glow: 16 185 129;
+  --fg: #ffffff;
+  --fg-muted: rgb(255 255 255 / 0.65);
+  --line: rgb(255 255 255 / 0.14);
+  --surface: rgb(255 255 255 / 0.05);
+  --surface-strong: rgb(255 255 255 / 0.1);
+}
+
+[data-theme="earth"] {
+  --ink-950: #f3ebe0;
+  --ink-900: #ece1d2;
+  --ink-800: #ddcdb8;
+  --brand-300: #8fb27a;
+  --brand-400: #5d8a48;
+  --brand-500: #6c9a56;
+  --brand-600: #567f42;
+  --brand-700: #3f6431;
+  --on-brand: #ffffff;
+  --glow: 150 185 120;
+  --fg: #2b2118;
+  --fg-muted: #6e5c4b;
+  --line: rgb(43 33 24 / 0.14);
+  --surface: rgb(255 255 255 / 0.55);
+  --surface-strong: rgb(255 255 255 / 0.85);
 }
 
 [data-theme="midnight"] {
@@ -32,6 +56,11 @@
   --brand-700: #8a6424;
   --on-brand: #0b1224;
   --glow: 70 110 220;
+  --fg: #ffffff;
+  --fg-muted: rgb(255 255 255 / 0.65);
+  --line: rgb(255 255 255 / 0.14);
+  --surface: rgb(255 255 255 / 0.05);
+  --surface-strong: rgb(255 255 255 / 0.1);
 }
 
 [data-theme="graphite"] {
@@ -45,11 +74,16 @@
   --brand-700: #7a4425;
   --on-brand: #ffffff;
   --glow: 208 128 76;
+  --fg: #ffffff;
+  --fg-muted: rgb(255 255 255 / 0.65);
+  --line: rgb(255 255 255 / 0.14);
+  --surface: rgb(255 255 255 / 0.05);
+  --surface-strong: rgb(255 255 255 / 0.1);
 }
 
 :root {
   --background: var(--ink-950);
-  --foreground: #f5f7f6;
+  --foreground: var(--fg);
 }
 
 @theme inline {
@@ -67,6 +101,11 @@
   --color-brand-600: var(--brand-600);
   --color-brand-700: var(--brand-700);
   --color-on-brand: var(--on-brand);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-line: var(--line);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
 }
 
 @theme {

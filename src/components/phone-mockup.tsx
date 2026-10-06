@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 export function PhoneMockup({ children }: { children: ReactNode }) {
   return (
     <div className="relative mx-auto w-[270px] sm:w-[290px]">
-      <div className="rounded-[2.75rem] bg-gradient-to-b from-ink-800 to-ink-900 p-2.5 shadow-2xl shadow-black/60 ring-1 ring-white/15">
+      <div className="rounded-[2.75rem] bg-gradient-to-b from-[#2a2420] to-[#141110] p-2.5 shadow-2xl shadow-black/35 ring-1 ring-white/15">
         <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.25rem] bg-white">
           <div
             aria-hidden

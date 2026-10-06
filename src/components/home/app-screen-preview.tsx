@@ -3,9 +3,9 @@
 // text carries the message.
 export function AppScreenPreview() {
   return (
-    <div aria-hidden className="flex h-full flex-col bg-slate-50 text-ink-900">
+    <div aria-hidden className="flex h-full flex-col bg-slate-50 text-slate-900">
       {/* Header band */}
-      <div className="bg-gradient-to-br from-brand-700 to-ink-800 px-4 pb-14 pt-11 text-white">
+      <div className="bg-gradient-to-br from-brand-600 to-brand-700 px-4 pb-14 pt-11 text-white">
         <div className="flex items-center justify-between text-xs">
           <span className="font-semibold">Husker AI</span>
           <span className="rounded-full bg-white/15 px-2 py-0.5 text-[10px]">Offline ready</span>

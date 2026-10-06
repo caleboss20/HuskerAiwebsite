@@ -31,8 +31,8 @@ export const siteConfig = {
     "cocoa farmers",
   ],
   // Brand colours (match globals.css).
-  themeColor: "#050d09",
-  backgroundColor: "#050d09",
+  themeColor: "#f3ebe0",
+  backgroundColor: "#f3ebe0",
 } as const;
 
 type SitemapEntry = {
