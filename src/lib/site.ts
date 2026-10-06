@@ -17,9 +17,9 @@ export const siteConfig = {
   url: resolveSiteUrl(),
   // TODO: replace with final copy once the messaging is agreed.
   description:
-    "Husker AI turns cocoa pod husks, the largest waste stream of cocoa farming, into valuable products and a new source of income for cocoa farmers.",
-  tagline: "Cocoa pod husk valorization",
-  locale: "en_US",
+    "Husker AI helps cocoa farmers turn discarded cocoa pod husks into extra income. Scan husks with a smartphone to estimate quantity, quality and value, then connect with buyers. Works offline, in local languages.",
+  tagline: "AI for cocoa pod husk valorization",
+  locale: "en_GH",
   keywords: [
     "cocoa pod husk",
     "cocoa pod husk valorization",
@@ -30,9 +30,9 @@ export const siteConfig = {
     "biomass",
     "cocoa farmers",
   ],
-  // TODO: placeholder brand colours until the design is set.
-  themeColor: "#3b2416",
-  backgroundColor: "#fbf7f2",
+  // Brand colours (match globals.css).
+  themeColor: "#050d09",
+  backgroundColor: "#050d09",
 } as const;
 
 type SitemapEntry = {
