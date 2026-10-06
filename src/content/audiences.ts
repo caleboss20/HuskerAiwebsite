@@ -12,18 +12,3 @@ export const farmerBenefits = [
     body: "Built for the farm: no data needed to scan, with local language support.",
   },
 ];
-
-export const buyerBenefits = [
-  {
-    title: "Know the quality before you buy",
-    body: "Every listing comes with an AI grade and estimated weight, so there are no surprises at pickup.",
-  },
-  {
-    title: "Steady supply, straight from farms",
-    body: "Find husk by grade and location and buy directly from farmers, not middlemen.",
-  },
-  {
-    title: "Back your sustainability goals",
-    body: "Source husk that would otherwise be burned and cut emissions across your supply chain.",
-  },
-];

@@ -1,39 +1,58 @@
+import type { StaticImageData } from "next/image";
+import gradeA from "@/assets/grade-a.webp";
+import gradeB from "@/assets/grade-b.webp";
+import gradeC from "@/assets/grade-c.webp";
+
 export const steps = [
   {
-    icon: "scan",
     title: "Scan your husk pile",
     body: "Point your phone at the pile and take one photo. It works offline, right on the farm.",
   },
   {
-    icon: "grade",
     title: "AI grades it",
     body: "Husker AI checks quality and size, then grades the pile A, B or C with an estimated weight.",
   },
   {
-    icon: "market",
     title: "Sell to the right buyer",
     body: "See companies looking for your grade, what they will use it for and what they pay. Pick one and sell.",
   },
-] as const;
+];
 
-export type StepIcon = (typeof steps)[number]["icon"];
+type Grade = {
+  grade: "A" | "B" | "C";
+  quality: string;
+  uses: string[];
+  image: StaticImageData;
+  imageAlt: string;
+  imagePosition?: string;
+};
 
 // Typical end uses per grade. Clean, dry husk earns the most; lower
 // grades still have buyers. Update with real marketplace data later.
-export const grades = [
+export const grades: Grade[] = [
   {
     grade: "A",
     quality: "Fresh, clean and dry",
     uses: ["Animal feed", "Cosmetics & skincare"],
+    image: gradeA,
+    imageAlt: "Fresh yellow cocoa pod being opened, Grade A husk",
+    imagePosition: "20% 50%",
   },
   {
     grade: "B",
-    quality: "Good, some drying or wear",
+    quality: "Part fresh, part rotting",
     uses: ["Cocoa potash", "Soap making"],
+    // TODO: placeholder (toned crop of the Grade A photo); replace
+    // with a real photo of Grade B husk.
+    image: gradeB,
+    imageAlt: "Cocoa pod husk with some drying, Grade B husk",
   },
   {
     grade: "C",
     quality: "Older or partly decomposed",
     uses: ["Biochar", "Organic fertiliser"],
+    image: gradeC,
+    imageAlt: "Dark, dried cocoa pod hanging on the tree, Grade C husk",
+    imagePosition: "50% 55%",
   },
-] as const;
+];

@@ -4,7 +4,6 @@ import { siteConfig } from "@/lib/site";
 const links = [
   { href: "/#how-it-works", label: "How it works" },
   { href: "/#farmers", label: "For farmers" },
-  { href: "/#buyers", label: "For buyers" },
   { href: "/#about", label: "About" },
 ];
 
