@@ -3,6 +3,7 @@ import { About } from "@/components/home/about";
 import { Audiences } from "@/components/home/audiences";
 import { HowItWorks } from "@/components/home/how-it-works";
 import { Impact } from "@/components/home/impact";
+import { Waitlist } from "@/components/home/waitlist";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HowItWorks />
       <Audiences />
       <About />
+      <Waitlist />
     </main>
   );
 }
