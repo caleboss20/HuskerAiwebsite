@@ -54,4 +54,5 @@ type SitemapEntry = {
 // Add every public page here so it lands in sitemap.xml.
 export const routes: SitemapEntry[] = [
   { path: "/", changeFrequency: "monthly", priority: 1 },
+  { path: "/privacy", changeFrequency: "yearly", priority: 0.3 },
 ];

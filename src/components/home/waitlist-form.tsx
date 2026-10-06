@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useActionState } from "react";
 import { joinWaitlist, type WaitlistState } from "@/app/actions/waitlist";
 
@@ -102,6 +103,13 @@ export function WaitlistForm() {
         >
           {pending ? "Joining…" : "Join the waitlist"}
         </button>
+        <p className="-mt-2 text-center text-xs text-fg-muted">
+          By joining, you agree to our{" "}
+          <Link href="/privacy" className="font-medium text-fg underline underline-offset-2">
+            privacy policy
+          </Link>
+          .
+        </p>
       </div>
     </form>
   );

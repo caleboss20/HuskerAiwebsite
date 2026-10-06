@@ -125,7 +125,12 @@ export function Footer() {
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
-          <p>Built at KNUST, Kumasi, Ghana.</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href="/privacy" className="transition-colors hover:text-white">
+              Privacy policy
+            </Link>
+            <p>Built at KNUST, Kumasi, Ghana.</p>
+          </div>
         </div>
       </div>
     </footer>
