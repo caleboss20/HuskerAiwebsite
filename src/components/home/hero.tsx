@@ -13,8 +13,8 @@ export function Hero() {
 
       {/* Text sits first and compact so the heading and both
           buttons are visible on load, on phones too. */}
-      <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 pb-16 pt-24 sm:px-6 lg:min-h-[min(100svh,860px)] lg:grid-cols-[1.15fr_1fr] lg:gap-10 lg:pb-16 lg:pt-28">
-        <div className="text-center lg:text-left">
+      <div className="mx-auto grid max-w-6xl items-start gap-14 px-5 pb-16 pt-24 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:gap-10 lg:pb-20 lg:pt-28">
+        <div className="text-center lg:pt-12 lg:text-left">
           <h1 className="font-display text-[2.6rem] font-semibold leading-[1.02] tracking-[-0.03em] text-white sm:text-6xl lg:text-[4.25rem]">
             Turn cocoa pod husks into{" "}
             <span className="text-brand-400">extra income.</span>
