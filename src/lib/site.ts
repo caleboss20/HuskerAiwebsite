@@ -32,7 +32,7 @@ export const siteConfig = {
   ],
   // Public contact details. Footer shows only the ones that are set.
   contact: {
-    email: "" as string,
+    email: "huskertechnologies@gmail.com" as string,
     phone: "" as string,
     location: "Kumasi, Ghana",
   },
