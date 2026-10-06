@@ -35,7 +35,7 @@ function XIcon() {
   );
 }
 
-// Fixed dark palette: the footer stays dark cocoa in every theme.
+// Fixed warm cocoa palette, same in every theme.
 export function Footer() {
   const { contact, social } = siteConfig;
   const socials = [
@@ -44,14 +44,14 @@ export function Footer() {
   ].filter(Boolean) as { href: string; label: string; icon: React.ReactNode }[];
 
   return (
-    <footer className="bg-[#1f1712] text-[#f3ebe0]">
+    <footer className="bg-[#4a3a2e] text-[#f3ebe0]">
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-6 sm:pt-20">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.2fr] md:gap-8">
           <div className="max-w-xs">
             <Link href="/" className="font-display text-2xl font-semibold tracking-tight">
               {siteConfig.name}
             </Link>
-            <p className="mt-4 text-sm leading-relaxed text-[#f3ebe0]/65">
+            <p className="mt-4 text-sm leading-relaxed text-[#f3ebe0]/80">
               AI that helps Ghana&apos;s cocoa farmers turn discarded pod husks
               into extra income.
             </p>
@@ -66,13 +66,13 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 md:contents">
             {columns.map((col) => (
               <nav key={col.title} aria-label={col.title}>
-                <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#f3ebe0]/50">
+                <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#f3ebe0]/70">
                   {col.title}
                 </h2>
                 <ul className="mt-4 space-y-3 text-sm">
                   {col.links.map((link) => (
                     <li key={link.label}>
-                      <Link href={link.href} className="text-[#f3ebe0]/80 transition-colors hover:text-white">
+                      <Link href={link.href} className="text-[#f3ebe0]/90 transition-colors hover:text-white">
                         {link.label}
                       </Link>
                     </li>
@@ -83,8 +83,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#f3ebe0]/50">Contact</h2>
-            <address className="mt-4 space-y-3 text-sm not-italic text-[#f3ebe0]/80">
+            <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-[#f3ebe0]/70">Contact</h2>
+            <address className="mt-4 space-y-3 text-sm not-italic text-[#f3ebe0]/90">
               {contact.email && (
                 <p>
                   <a href={`mailto:${contact.email}`} className="transition-colors hover:text-white">
@@ -110,7 +110,7 @@ export function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={s.label}
-                      className="grid size-9 place-items-center rounded-full border border-[#f3ebe0]/20 text-[#f3ebe0]/80 transition-colors hover:border-white hover:text-white"
+                      className="grid size-9 place-items-center rounded-full border border-[#f3ebe0]/20 text-[#f3ebe0]/90 transition-colors hover:border-white hover:text-white"
                     >
                       {s.icon}
                     </a>
@@ -121,7 +121,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-[#f3ebe0]/15 pt-6 text-xs text-[#f3ebe0]/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-[#f3ebe0]/20 pt-6 text-xs text-[#f3ebe0]/75 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
