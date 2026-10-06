@@ -39,10 +39,19 @@ export function WaitlistForm() {
           {errors.name && <p id="wl-name-err" className="mt-1 text-sm text-red-700">{errors.name}</p>}
         </div>
 
-        <div>
-          <label htmlFor="wl-contact" className="text-sm font-medium text-fg">Phone or email</label>
-          <input id="wl-contact" name="contact" autoComplete="tel" placeholder="024 123 4567" required aria-invalid={!!errors.contact} aria-describedby={errors.contact ? "wl-contact-err" : undefined} className={inputClass} />
-          {errors.contact && <p id="wl-contact-err" className="mt-1 text-sm text-red-700">{errors.contact}</p>}
+        <div className="grid gap-5 sm:grid-cols-2">
+          <div>
+            <label htmlFor="wl-phone" className="text-sm font-medium text-fg">Phone number</label>
+            <input id="wl-phone" name="phone" type="tel" autoComplete="tel" placeholder="024 123 4567" aria-invalid={!!errors.phone} aria-describedby={errors.phone ? "wl-phone-err" : undefined} className={inputClass} />
+            {errors.phone && <p id="wl-phone-err" className="mt-1 text-sm text-red-700">{errors.phone}</p>}
+          </div>
+          <div>
+            <label htmlFor="wl-email" className="text-sm font-medium text-fg">
+              Email <span className="font-normal text-fg-muted">(optional)</span>
+            </label>
+            <input id="wl-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" aria-invalid={!!errors.email} aria-describedby={errors.email ? "wl-email-err" : undefined} className={inputClass} />
+            {errors.email && <p id="wl-email-err" className="mt-1 text-sm text-red-700">{errors.email}</p>}
+          </div>
         </div>
 
         <fieldset>

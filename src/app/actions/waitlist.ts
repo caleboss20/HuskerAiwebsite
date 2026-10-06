@@ -3,7 +3,7 @@
 export type WaitlistState =
   | { status: "idle" }
   | { status: "success" }
-  | { status: "error"; message: string; fieldErrors?: Partial<Record<"name" | "contact" | "role", string>> };
+  | { status: "error"; message: string; fieldErrors?: Partial<Record<"name" | "phone" | "email" | "role", string>> };
 
 const ROLES = ["farmer", "buyer", "partner", "investor"] as const;
 
@@ -15,15 +15,16 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
   if (formData.get("website")) return { status: "success" };
 
   const name = String(formData.get("name") ?? "").trim();
-  const contact = String(formData.get("contact") ?? "").trim();
+  const phone = String(formData.get("phone") ?? "").trim();
+  const email = String(formData.get("email") ?? "").trim();
   const role = String(formData.get("role") ?? "");
   const community = String(formData.get("community") ?? "").trim();
 
   const fieldErrors: NonNullable<Extract<WaitlistState, { status: "error" }>["fieldErrors"]> = {};
   if (name.length < 2) fieldErrors.name = "Please enter your name.";
-  const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contact);
-  const isPhone = /^\+?[\d\s-]{9,15}$/.test(contact);
-  if (!isEmail && !isPhone) fieldErrors.contact = "Enter a phone number or email address.";
+  if (phone && !/^\+?[\d\s-]{9,15}$/.test(phone)) fieldErrors.phone = "Enter a valid phone number.";
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) fieldErrors.email = "Enter a valid email address.";
+  if (!phone && !email) fieldErrors.phone = "Enter a phone number or an email address.";
   if (!ROLES.includes(role as (typeof ROLES)[number])) fieldErrors.role = "Choose one.";
   if (Object.keys(fieldErrors).length > 0) {
     return { status: "error", message: "Please check the highlighted fields.", fieldErrors };
@@ -31,7 +32,8 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
 
   const signup = {
     name: name.slice(0, 120),
-    contact: contact.slice(0, 120),
+    phone: phone.slice(0, 30),
+    email: email.slice(0, 120),
     role,
     community: community.slice(0, 120),
     createdAt: new Date().toISOString(),
