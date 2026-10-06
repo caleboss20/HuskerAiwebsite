@@ -74,6 +74,20 @@ export function WaitlistForm() {
           <input id="wl-community" name="community" autoComplete="address-level2" placeholder="e.g. Goaso" className={inputClass} />
         </div>
 
+        <div>
+          <label htmlFor="wl-notes" className="text-sm font-medium text-fg">
+            Notes <span className="font-normal text-fg-muted">(optional)</span>
+          </label>
+          <textarea
+            id="wl-notes"
+            name="notes"
+            rows={3}
+            maxLength={1000}
+            placeholder="Anything you'd like us to know, e.g. how much husk you have each season."
+            className={`${inputClass} resize-y`}
+          />
+        </div>
+
         {/* Honeypot for bots */}
         <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
 

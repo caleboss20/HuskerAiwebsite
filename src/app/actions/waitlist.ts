@@ -19,6 +19,7 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
   const email = String(formData.get("email") ?? "").trim();
   const role = String(formData.get("role") ?? "");
   const community = String(formData.get("community") ?? "").trim();
+  const notes = String(formData.get("notes") ?? "").trim();
 
   const fieldErrors: NonNullable<Extract<WaitlistState, { status: "error" }>["fieldErrors"]> = {};
   if (name.length < 2) fieldErrors.name = "Please enter your name.";
@@ -36,6 +37,7 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
     email: email.slice(0, 120),
     role,
     community: community.slice(0, 120),
+    notes: notes.slice(0, 1000),
     createdAt: new Date().toISOString(),
   };
 
