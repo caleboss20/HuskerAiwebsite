@@ -110,6 +110,14 @@
 
 @theme {
   --color-pod-400: #e8a33a;
+
+  /* Right-to-left name strip; content is rendered twice, so -50% loops. */
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 body {
