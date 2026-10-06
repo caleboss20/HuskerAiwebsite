@@ -119,6 +119,41 @@
     }
   }
 
+  /* 404 lost pod: idle bob, hop when tapped, blink. */
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes hop {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    40% {
+      transform: translateY(-36px) rotate(-12deg);
+    }
+    70% {
+      transform: translateY(0) rotate(8deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes blink {
+    0%,
+    92%,
+    100% {
+      transform: scaleY(1);
+    }
+    95% {
+      transform: scaleY(0.1);
+    }
+  }
+
   /* Scan demo: boxes and result card pop in once (staggered by delay). */
   --animate-pop: pop 0.35s ease-out both;
   @keyframes pop {
