@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "@/assets/logo.png";
 import { siteConfig } from "@/lib/site";
 
 const links = [
@@ -10,8 +12,14 @@ const links = [
 
 function Logo() {
   return (
-    <Link href="/" className="font-display text-xl font-semibold tracking-tight text-fg">
-      {siteConfig.name}
+    <Link href="/" aria-label={`${siteConfig.name} home`} className="block">
+      <Image
+        src={logo}
+        alt={siteConfig.name}
+        loading="eager"
+        sizes="160px"
+        className="h-10 w-auto sm:h-11"
+      />
     </Link>
   );
 }

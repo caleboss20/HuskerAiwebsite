@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import logo from "@/assets/logo.png";
 import { siteConfig } from "@/lib/site";
 
 const columns = [
@@ -48,8 +50,9 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 pb-10 pt-16 sm:px-6 sm:pt-20">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1.2fr] md:gap-8">
           <div className="max-w-xs">
-            <Link href="/" className="font-display text-2xl font-semibold tracking-tight">
-              {siteConfig.name}
+            {/* Logo sits on a cream card so the brown lettering stays readable. */}
+            <Link href="/" aria-label={`${siteConfig.name} home`} className="inline-block rounded-xl bg-[#f3ebe0] px-4 py-3">
+              <Image src={logo} alt={siteConfig.name} sizes="180px" className="h-11 w-auto" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-[#f3ebe0]/80">
               AI that helps Ghana&apos;s cocoa farmers turn discarded pod husks
