@@ -70,11 +70,12 @@ export const stats: Stat[] = [
 // main lettering up with the text names: same size, same centre line.
 // Measured from where the lettering sits inside each logo image.
 type Logo = { src: StaticImageData; height: number; shift: number };
+// Companies with a logo first, then name-only ones.
 export const huskCompanies: { name: string; logo?: Logo }[] = [
   { name: "NutriPodx", logo: { src: nutripodxLogo, height: 1.55, shift: -0.37 } },
-  { name: "Adtech Agro" },
   { name: "MorePlex", logo: { src: moreplexLogo, height: 1.8, shift: -0.12 } },
-  { name: "McHan Organics" },
   { name: "Tachibana International Ghana", logo: { src: tachibanaLogo, height: 0.95, shift: 0 } },
+  { name: "Adtech Agro" },
+  { name: "McHan Organics" },
   { name: "Asaase Pa" },
 ];
