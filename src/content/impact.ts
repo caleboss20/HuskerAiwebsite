@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import adtechLogo from "@/assets/logos/adtech.png";
 import moreplexLogo from "@/assets/logos/moreplex.png";
 import nutripodxLogo from "@/assets/logos/nutripodx.png";
 import tachibanaLogo from "@/assets/logos/tachibana.png";
@@ -75,7 +76,7 @@ export const huskCompanies: { name: string; logo?: Logo }[] = [
   { name: "NutriPodx", logo: { src: nutripodxLogo, height: 1.55, shift: -0.37 } },
   { name: "MorePlex", logo: { src: moreplexLogo, height: 1.8, shift: -0.12 } },
   { name: "Tachibana International Ghana", logo: { src: tachibanaLogo, height: 0.95, shift: 0 } },
-  { name: "Adtech Agro" },
+  { name: "Adtech Agro", logo: { src: adtechLogo, height: 1.6, shift: 0.29 } },
   { name: "McHan Organics" },
   { name: "Asaase Pa" },
 ];

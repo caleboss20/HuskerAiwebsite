@@ -85,7 +85,7 @@ export function Impact() {
         <p className="mx-auto max-w-6xl px-5 text-center text-sm font-medium text-fg-muted sm:px-6">
           Companies in Ghana already turning cocoa husk into value
         </p>
-        <div className="group mt-10 flex overflow-hidden sm:mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="group mt-6 flex overflow-hidden py-5 sm:mt-8 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <div className="flex animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
             <CompanyList />
             <CompanyList hidden />
