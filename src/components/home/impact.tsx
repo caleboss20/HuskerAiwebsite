@@ -6,12 +6,12 @@ function CompanyList({ hidden = false }: { hidden?: boolean }) {
   return (
     <ul aria-hidden={hidden || undefined} className="flex shrink-0 items-center gap-12 pr-12 sm:gap-20 sm:pr-20">
       {huskCompanies.map(({ name, logo }) => (
-        <li key={name} className="flex h-[1.6em] items-center font-display text-[2.1rem] transition-transform duration-300 ease-out hover:scale-115 motion-reduce:transition-none sm:text-4xl">
+        <li key={name} className="flex h-[1.6em] items-center font-display text-[2.5rem] transition-transform duration-300 ease-out hover:scale-115 motion-reduce:transition-none sm:text-5xl">
           {logo ? (
             <Image
               src={logo.src}
               alt={hidden ? "" : name}
-              sizes="240px"
+              sizes="320px"
               className="w-auto max-w-none"
               style={{ height: `${logo.height}em`, transform: `translateY(${logo.shift}em)` }}
             />

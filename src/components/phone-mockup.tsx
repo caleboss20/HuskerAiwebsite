@@ -2,9 +2,9 @@ import type { ReactNode } from "react";
 
 // Phone frame for app screenshots. Pass an <Image> of the real
 // screen as children; the inner area is 9:19.5 like a modern phone.
-export function PhoneMockup({ children }: { children: ReactNode }) {
+export function PhoneMockup({ children, className = "w-[270px] sm:w-[290px]" }: { children: ReactNode; className?: string }) {
   return (
-    <div className="relative mx-auto w-[270px] sm:w-[290px]">
+    <div className={`relative mx-auto ${className}`}>
       <div className="rounded-[2.75rem] bg-gradient-to-b from-[#2a2420] to-[#141110] p-2.5 shadow-2xl shadow-black/35 ring-1 ring-white/15">
         <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.25rem] bg-white">
           <div
