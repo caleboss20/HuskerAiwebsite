@@ -63,7 +63,7 @@ export function Footer() {
           <div className="max-w-xs">
             {/* Light variant: cream lettering, original pod and green AI. */}
             <Link href="/" aria-label={`${siteConfig.name} home`} className="inline-block">
-              <Image src={logoLight} alt={siteConfig.name} sizes="240px" className="h-16 w-auto sm:h-12" />
+              <Image src={logoLight} alt={siteConfig.name} sizes="200px" className="h-12 w-auto" />
             </Link>
             <p className="mt-4 text-sm leading-relaxed text-[#f3ebe0]/80">
               AI that helps Ghana&apos;s cocoa farmers turn discarded pod husks

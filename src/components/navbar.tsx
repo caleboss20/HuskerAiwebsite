@@ -17,8 +17,8 @@ function Logo() {
         src={logo}
         alt={siteConfig.name}
         loading="eager"
-        sizes="220px"
-        className="h-14 w-auto sm:h-12"
+        sizes="160px"
+        className="h-10 w-auto sm:h-11"
       />
     </Link>
   );

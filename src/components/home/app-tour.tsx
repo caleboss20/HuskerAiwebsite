@@ -21,7 +21,7 @@ export function AppTour() {
         </p>
       </div>
 
-      <ol className="mx-auto mt-14 flex max-w-6xl snap-x snap-mandatory gap-6 overflow-x-auto px-5 pb-4 [scrollbar-width:none] sm:px-6 lg:grid lg:grid-cols-3 lg:gap-10 lg:overflow-visible [&::-webkit-scrollbar]:hidden">
+      <ol className="mx-auto mt-14 flex max-w-6xl snap-x snap-mandatory gap-10 overflow-x-auto px-5 pb-4 [scrollbar-width:none] sm:gap-12 sm:px-6 lg:grid lg:grid-cols-3 lg:gap-20 lg:overflow-visible [&::-webkit-scrollbar]:hidden">
         {appTour.map((step, i) => (
           <li key={step.title} className="w-[78%] max-w-[300px] shrink-0 snap-center sm:w-[290px] lg:w-auto lg:max-w-none">
             <PhoneMockup>
