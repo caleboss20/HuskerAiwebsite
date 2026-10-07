@@ -29,6 +29,16 @@ function LinkedInIcon() {
   );
 }
 
+function InstagramIcon() {
+  return (
+    <svg aria-hidden viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 function XIcon() {
   return (
     <svg aria-hidden viewBox="0 0 24 24" className="size-4" fill="currentColor">
@@ -42,6 +52,7 @@ export function Footer() {
   const { contact, social } = siteConfig;
   const socials = [
     social.linkedin && { href: social.linkedin, label: "Husker AI on LinkedIn", icon: <LinkedInIcon /> },
+    social.instagram && { href: social.instagram, label: "Husker AI on Instagram", icon: <InstagramIcon /> },
     social.x && { href: social.x, label: "Husker AI on X", icon: <XIcon /> },
   ].filter(Boolean) as { href: string; label: string; icon: React.ReactNode }[];
 

@@ -4,7 +4,7 @@
 
 **AI that helps cocoa farmers turn discarded pod husks into extra income.**
 
-[Website](https://huskerai.vercel.app) · [LinkedIn](https://www.linkedin.com/company/husker-ai) · [Contact](mailto:huskertechnologies@gmail.com)
+[Website](https://huskerai.vercel.app) · [LinkedIn](https://www.linkedin.com/company/husker-ai) · [Instagram](https://www.instagram.com/huskertechnologies/) · [Contact](mailto:huskertechnologies@gmail.com)
 
 </div>
 

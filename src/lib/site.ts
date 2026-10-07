@@ -38,6 +38,7 @@ export const siteConfig = {
   },
   social: {
     linkedin: "https://www.linkedin.com/company/husker-ai",
+    instagram: "https://www.instagram.com/huskertechnologies/",
     x: "" as string,
   },
   // Brand colours (match globals.css).
