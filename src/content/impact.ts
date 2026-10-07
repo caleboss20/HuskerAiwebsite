@@ -1,8 +1,10 @@
 import type { StaticImageData } from "next/image";
 import adtechLogo from "@/assets/logos/adtech.png";
+import asaasepaLogo from "@/assets/logos/asaasepa.png";
 import mchanLogo from "@/assets/logos/mchan.png";
 import moreplexLogo from "@/assets/logos/moreplex.png";
 import nutripodxLogo from "@/assets/logos/nutripodx.png";
+import opcLogo from "@/assets/logos/opc.png";
 import tachibanaLogo from "@/assets/logos/tachibana.png";
 
 // Content for the home page impact section. Every figure needs a
@@ -79,5 +81,6 @@ export const huskCompanies: { name: string; logo?: Logo }[] = [
   { name: "Tachibana International Ghana", logo: { src: tachibanaLogo, height: 0.95, shift: 0 } },
   { name: "Adtech Agro", logo: { src: adtechLogo, height: 1.6, shift: 0.29 } },
   { name: "McHan Organics", logo: { src: mchanLogo, height: 1.7, shift: -0.19 } },
-  { name: "Asaase Pa" },
+  { name: "Asaase Pa", logo: { src: asaasepaLogo, height: 1.35, shift: 0 } },
+  { name: "Organic Potash Corporation", logo: { src: opcLogo, height: 1.45, shift: 0.22 } },
 ];
