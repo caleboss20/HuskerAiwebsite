@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { grades, steps } from "@/content/how-it-works";
+import { grades } from "@/content/how-it-works";
+import { AppTourSteps } from "./app-tour";
 import { ScanDemo } from "./scan-demo";
 
 export function HowItWorks() {
@@ -15,23 +16,19 @@ export function HowItWorks() {
           id="how-heading"
           className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl"
         >
-          From husk pile to paying buyer in three steps.
+          From husk pile to paying buyer in four steps.
         </h2>
+        <p className="mt-4 max-w-xl text-lg leading-relaxed text-fg-muted">
+          Real screens from the Husker AI app, built for farmers on everyday
+          Android phones.
+        </p>
+      </div>
 
-        <ol className="mt-14 grid gap-12 md:grid-cols-3 md:gap-10">
-          {steps.map((step, i) => (
-            <li key={step.title} className="border-t border-fg/80 pt-6">
-              <span className="font-display text-sm font-semibold tabular-nums text-brand-700">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-fg">
-                {step.title}
-              </h3>
-              <p className="mt-3 leading-relaxed text-fg-muted">{step.body}</p>
-            </li>
-          ))}
-        </ol>
+      <div id="app" className="scroll-mt-8">
+        <AppTourSteps />
+      </div>
 
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
         <ScanDemo />
 
         <div className="mt-28 sm:mt-32">

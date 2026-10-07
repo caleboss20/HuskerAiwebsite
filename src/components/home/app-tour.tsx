@@ -2,25 +2,11 @@ import Image from "next/image";
 import { PhoneMockup } from "@/components/phone-mockup";
 import { appTour } from "@/content/app-tour";
 
-// Three real app screens in phone frames. Desktop: side by side.
-// Phones: swipe horizontally (CSS scroll-snap, no JS).
-export function AppTour() {
+// The "How it works" steps, each shown on a real app screen in a phone
+// frame. Desktop: one row. Phones: swipe horizontally (CSS scroll-snap).
+export function AppTourSteps() {
   return (
-    <section id="app" aria-labelledby="app-heading" className="scroll-mt-8 border-t border-line py-24 sm:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-700">Inside the app</p>
-        <h2
-          id="app-heading"
-          className="mt-3 max-w-2xl font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl"
-        >
-          From photo to paying buyer, in one app.
-        </h2>
-        <p className="mt-4 max-w-xl text-lg leading-relaxed text-fg-muted">
-          These are real screens from Husker AI, built for farmers on
-          everyday Android phones.
-        </p>
-      </div>
-
+    <div>
       <ol className="mx-auto mt-14 flex max-w-6xl snap-x snap-mandatory gap-10 overflow-x-auto px-5 pb-4 [scrollbar-width:none] sm:gap-12 sm:px-6 lg:grid lg:grid-cols-4 lg:gap-12 lg:overflow-visible [&::-webkit-scrollbar]:hidden">
         {appTour.map((step, i) => (
           <li key={step.title} className="w-[78%] max-w-[300px] shrink-0 snap-center sm:w-[270px] lg:w-auto lg:max-w-none">
@@ -46,6 +32,6 @@ export function AppTour() {
         ))}
       </ol>
       <p className="mt-2 text-center text-xs text-fg-muted lg:hidden">Swipe to see each step</p>
-    </section>
+    </div>
   );
 }
