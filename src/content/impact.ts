@@ -66,11 +66,15 @@ export const stats: Stat[] = [
 // (from the team's research). Not partners: shown as names, no logos.
 // Logos are from each company's official website or public profile; add a logo here
 // when one is available, otherwise the name shows as a wordmark.
-export const huskCompanies: { name: string; logo?: StaticImageData }[] = [
-  { name: "NutriPodx", logo: nutripodxLogo },
+// `height` and `shift` (in em of the row's font size) line each logo's
+// main lettering up with the text names: same size, same centre line.
+// Measured from where the lettering sits inside each logo image.
+type Logo = { src: StaticImageData; height: number; shift: number };
+export const huskCompanies: { name: string; logo?: Logo }[] = [
+  { name: "NutriPodx", logo: { src: nutripodxLogo, height: 1.55, shift: -0.37 } },
   { name: "Adtech Agro" },
-  { name: "MorePlex", logo: moreplexLogo },
+  { name: "MorePlex", logo: { src: moreplexLogo, height: 1.8, shift: -0.12 } },
   { name: "McHan Organics" },
-  { name: "Tachibana International Ghana", logo: tachibanaLogo },
+  { name: "Tachibana International Ghana", logo: { src: tachibanaLogo, height: 0.95, shift: 0 } },
   { name: "Asaase Pa" },
 ];
