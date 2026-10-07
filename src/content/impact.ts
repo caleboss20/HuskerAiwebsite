@@ -1,3 +1,7 @@
+import type { StaticImageData } from "next/image";
+import nutripodxLogo from "@/assets/logos/nutripodx.png";
+import tachibanaLogo from "@/assets/logos/tachibana.png";
+
 // Content for the home page impact section. Every figure needs a
 // source or `estimate: true` (shown with an asterisk and footnote);
 // `value: null` renders "TBC".
@@ -59,11 +63,13 @@ export const stats: Stat[] = [
 
 // Ghanaian companies already turning cocoa pod husk into products
 // (from the team's research). Not partners: shown as names, no logos.
-export const huskCompanies = [
-  "NutriPodx",
-  "Adtech Agro",
-  "MorePlex",
-  "McHan Organics",
-  "Tachibana International Ghana",
-  "Asaase Pa",
+// Logos are from each company's official website; add a logo here
+// when one is available, otherwise the name shows as a wordmark.
+export const huskCompanies: { name: string; logo?: StaticImageData }[] = [
+  { name: "NutriPodx", logo: nutripodxLogo },
+  { name: "Adtech Agro" },
+  { name: "MorePlex" },
+  { name: "McHan Organics" },
+  { name: "Tachibana International Ghana", logo: tachibanaLogo },
+  { name: "Asaase Pa" },
 ];

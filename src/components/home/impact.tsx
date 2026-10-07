@@ -1,15 +1,25 @@
+import Image from "next/image";
 import { CountUp } from "@/components/count-up";
 import { huskCompanies, sources, stats } from "@/content/impact";
 
 function CompanyList({ hidden = false }: { hidden?: boolean }) {
   return (
     <ul aria-hidden={hidden || undefined} className="flex shrink-0 items-center gap-14 pr-14 sm:gap-20 sm:pr-20">
-      {huskCompanies.map((name) => (
-        <li
-          key={name}
-          className="whitespace-nowrap font-display text-2xl font-semibold tracking-tight text-fg/80 sm:text-4xl"
-        >
-          {name}
+      {huskCompanies.map(({ name, logo }) => (
+        <li key={name} className="flex h-10 items-center sm:h-14">
+          {logo ? (
+            <Image
+              src={logo}
+              alt={hidden ? "" : name}
+              height={56}
+              sizes="200px"
+              className="h-full w-auto opacity-75 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+            />
+          ) : (
+            <span className="whitespace-nowrap font-display text-2xl font-semibold tracking-tight text-fg/75 sm:text-4xl">
+              {name}
+            </span>
+          )}
         </li>
       ))}
     </ul>
