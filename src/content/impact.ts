@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import moreplexLogo from "@/assets/logos/moreplex.png";
 import nutripodxLogo from "@/assets/logos/nutripodx.png";
 import tachibanaLogo from "@/assets/logos/tachibana.png";
 
@@ -63,12 +64,12 @@ export const stats: Stat[] = [
 
 // Ghanaian companies already turning cocoa pod husk into products
 // (from the team's research). Not partners: shown as names, no logos.
-// Logos are from each company's official website; add a logo here
+// Logos are from each company's official website or public profile; add a logo here
 // when one is available, otherwise the name shows as a wordmark.
 export const huskCompanies: { name: string; logo?: StaticImageData }[] = [
   { name: "NutriPodx", logo: nutripodxLogo },
   { name: "Adtech Agro" },
-  { name: "MorePlex" },
+  { name: "MorePlex", logo: moreplexLogo },
   { name: "McHan Organics" },
   { name: "Tachibana International Ghana", logo: tachibanaLogo },
   { name: "Asaase Pa" },

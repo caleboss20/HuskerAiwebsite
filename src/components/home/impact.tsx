@@ -13,7 +13,7 @@ function CompanyList({ hidden = false }: { hidden?: boolean }) {
               alt={hidden ? "" : name}
               height={56}
               sizes="200px"
-              className="h-full w-auto opacity-75 grayscale transition duration-300 group-hover:opacity-100 group-hover:grayscale-0"
+              className="h-full w-auto"
             />
           ) : (
             <span className="whitespace-nowrap font-display text-2xl font-semibold tracking-tight text-fg/75 sm:text-4xl">
