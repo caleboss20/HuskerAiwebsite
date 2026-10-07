@@ -7,9 +7,9 @@ export type WaitlistState =
 
 const ROLES = ["farmer", "buyer", "partner", "investor"] as const;
 
-// Saves a waitlist signup by POSTing it as JSON to WAITLIST_WEBHOOK_URL
-// (e.g. a Google Apps Script web app that appends a row to a Sheet;
-// see docs/waitlist-google-sheet.md).
+// Saves a waitlist signup by POSTing it as JSON to WAITLIST_WEBHOOK_URL:
+// a Formspree form endpoint (docs/waitlist-formspree.md) or a Google
+// Apps Script web app that appends to a Sheet (docs/waitlist-google-sheet.md).
 export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Promise<WaitlistState> {
   // Honeypot: real people never see or fill this field.
   if (formData.get("website")) return { status: "success" };
@@ -54,7 +54,8 @@ export async function joinWaitlist(_prev: WaitlistState, formData: FormData): Pr
   try {
     const res = await fetch(webhook, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      // Accept JSON so services like Formspree reply with JSON, not a redirect.
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(signup),
       cache: "no-store",
     });
