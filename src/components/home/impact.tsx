@@ -44,6 +44,7 @@ export function Impact() {
                     {stat.prefix}
                     <CountUp value={stat.value} />
                     {stat.suffix}
+                    {stat.unit && <span className="ml-1.5 text-[0.45em] font-semibold tracking-normal text-fg-muted">{stat.unit}</span>}
                     {stat.estimate && <sup className="ml-0.5 text-[0.4em] font-medium text-fg-muted">*</sup>}
                   </>
                 )}

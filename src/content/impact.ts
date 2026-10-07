@@ -6,6 +6,8 @@ export type Stat = {
   value: number | null;
   prefix?: string;
   suffix?: string;
+  // Unit word shown smaller after the number, e.g. "tonnes".
+  unit?: string;
   label: string;
   sourceId?: keyof typeof sources;
   // Team estimate rather than a published figure; flagged on the page.
@@ -41,8 +43,8 @@ export const stats: Stat[] = [
     // (≈5M t CO₂e from 6M t unprocessed husk in Ghana, 2026 biochar
     // study) × a first target of 12,000 t of husk sold.
     value: 10000,
-    suffix: " t",
-    label: "of CO₂ to be avoided by selling husks instead of burning them",
+    unit: "tonnes",
+    label: "of CO₂ emissions to be avoided by selling husks instead of burning them",
     estimate: true,
   },
   {
