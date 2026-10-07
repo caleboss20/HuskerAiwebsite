@@ -1,17 +1,11 @@
 import type { StaticImageData } from "next/image";
 import buyers from "@/assets/app/buyers.webp";
+import price from "@/assets/app/price.webp";
 import result from "@/assets/app/result.webp";
 import scan from "@/assets/app/scan.webp";
 
 // Real screens from the Husker AI app, in the order a farmer uses it.
-// `position` picks which part of a tall screenshot shows in the phone.
-export const appTour: {
-  title: string;
-  body: string;
-  image: StaticImageData;
-  alt: string;
-  position?: string;
-}[] = [
+export const appTour: { title: string; body: string; image: StaticImageData; alt: string }[] = [
   {
     title: "Scan",
     body: "Point a smartphone camera at a pile of cocoa pod husks.",
@@ -27,10 +21,8 @@ export const appTour: {
   {
     title: "Value",
     body: "See an estimated price based on the grade and current market value.",
-    // TODO: replace with a screenshot of the price screen.
-    image: result,
-    position: "bottom",
-    alt: "Husker AI result screen showing the grade breakdown and estimated wet and dry weight of the husk pile",
+    image: price,
+    alt: "Husker AI price screen: Grade A used for pricing, price rates per 60 kg sac, 6 sacs and a total price of 300 cedis",
   },
   {
     title: "Sell",

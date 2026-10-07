@@ -18,7 +18,7 @@ export function AppTourSteps() {
                 sizes="(min-width: 1024px) 240px, 290px"
                 quality={90}
                 placeholder="blur"
-                className={`object-cover ${step.position === "bottom" ? "origin-bottom scale-[1.35] object-bottom" : "object-top"}`}
+                className="object-cover object-top"
               />
             </PhoneMockup>
             <div className="mx-auto mt-8 max-w-[270px] lg:max-w-[240px]">
